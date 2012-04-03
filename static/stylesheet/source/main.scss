@@ -263,130 +263,7 @@ body {
 				float: left;
 				max-width: 200px;
 			}
-		}
-		
-		// Hvordan? page
-		#content-2 {
-			@include prepend(1);
-			@include append(1);
 
-			.section-wrapper {
-				
-				a {
-					display: block;
-					margin: 0 auto;
-					text-align: center;
-					
-					span {
-						display: block;
-						margin-bottom: 10px;
-					}
-					
-					img {
-						display: block;
-						margin: 0 auto;
-						margin-bottom: 10px;
-					}
-				}
-			}
-			
-			.section-left {
-				@include column(9);
-				@include append(1);
-			}
-
-			.section-right {
-				@include column(9, true);
-			}
-						
-			h3 {
-				font-size: 1.2em;
-			}
-		}
-		
-		#content-2b, #content-2a {
-			@include prepend(1);
-			@include append(1);
-			
-			.back-nav {
-				@include border-radius(3px);
-				display: block;
-				width: 75px;
-				text-align: center;
-				background-color: $color_secondary;
-				padding: 10px 10px 8px 10px;
-				margin-bottom: 15px;
-				font-family: $font_normal;
-				line-height: 1em;
-				//@include single-box-shadow(rgba(0,0,0,1), 0, 2px, 0px, 0);					
-				color: $color_alt-primary;
-				cursor: pointer;
-				@include transition(all, 0.5s);
-			}
-			
-			#small_text {
-				font-size: 0.7em;	
-			}
-			
-			.back-nav:hover {
-				background-color: $color_tertiary;
-				//border: 1px solid $color_con-primary;
-				//@include scalable(0.9);
-			}			
-			
-			.number {
-				float: left;
-				font-size: 2.5em;
-				padding-right: 10px;
-				height: 130px;
-			}
-			
-			img { 
-				display: block;
-				margin: 0 auto;
-			}
-			
-			.section-a-wrapper {
-				margin-bottom: 20px;
-			}
-			
-			.section-a-left {
-				@include column(6);
-				
-				img {
-					max-width: 80%;
-					max-height: 120px;
-					margin: 0 auto;
-				}
-				
-				.image {
-					height: 150px;
-				}
-			}	
-			.section-a-center {
-				@include column(6);
-				
-				img {
-					//padding-top: 40px;
-					width: 40%;
-				}
-				.image {
-					height: 150px;
-				}
-			}
-			.section-a-right {
-				@include column(6, true);
-				@include append(1);
-
-				img {
-					//padding-top: 40px;
-					width: 35%;
-				}
-				.image {
-					height: 150px;
-				}				
-			}
-			
 			.table, .bullets {
 				@include column(19, true);
 			}
@@ -422,7 +299,30 @@ body {
 				}
 			}
 		}
+		
+		// Hvordan? page
+		#content-2 {
+			@include prepend(1);
+			@include append(1);
 
+			.image-right {
+				float: right;
+				max-width: 200px;
+			}
+			.image-left {
+				float: left;
+				max-width: 200px;
+			}
+						
+			h3 {
+				font-size: 1.2em;
+			}
+			.bold{
+				font-family: 'TitilliumText22LBold';
+			}
+		}
+		
+	
 		// Kontakt page
 		#content-3 {
 			@include prepend(1);
