@@ -257,6 +257,11 @@ body {
 			
 			.image-right {
 				float: right;
+				max-width: 200px;
+			}
+			.image-left {
+				float: left;
+				max-width: 200px;
 			}
 		}
 		
