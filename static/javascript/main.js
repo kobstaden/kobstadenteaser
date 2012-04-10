@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	// fancybox init
+	$(".fancybox").fancybox({closeClick: true});
+
 	// Replace e-mails with human readable
 	var spt = $('span.mailme');
 	var at = / at /;

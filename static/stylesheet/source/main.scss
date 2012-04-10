@@ -80,7 +80,7 @@ body {
 			border: 1px solid $color_con-primary;
 			border-right: 0px solid $color_primary;
 			background-color: $color_con-primary;
-			z-index: 10000;
+			z-index: 100;
 			cursor: pointer;
 			text-decoration: none;
 			font-size: 0.9em;
@@ -313,16 +313,43 @@ body {
 				float: left;
 				max-width: 200px;
 			}
-						
-			h3 {
-				font-size: 1.2em;
-			}
+
 			.bold{
 				font-family: 'TitilliumText22LBold';
 			}
+
+			.screenshot-right {
+				float: right;
+				margin-left: 20px;
+
+				img {
+					float: right;
+					max-width: 200px;
+				}
+
+				span {
+					clear:both;
+					float:right;
+					font-size: 0.8em;
+				}
+			}
+			.screenshot-left {
+				float: left;
+				margin-right: 20px;
+
+				img {
+					float: left;
+					max-width: 200px;
+				}
+
+				span {
+					clear:both;
+					float:right;
+					font-size: 0.8em;
+				}
+			}			
 		}
 		
-	
 		// Kontakt page
 		#content-3 {
 			@include prepend(1);
@@ -387,9 +414,14 @@ body {
 			}
 		}
 
+		// Priser page
 		#content-5 {
 			@include prepend(1);
 			@include append(1);
+
+			img {
+				float: right;
+			}
 		}
 	}
 }
