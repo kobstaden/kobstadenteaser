@@ -32,8 +32,6 @@ $(document).ready(function() {
 	// Navigation
 	$('.button').click(function() {
 		changeContent($(this).attr('rel'));
-		$('.selected').removeClass('selected');
-		$(this).addClass('selected');
 	});
 
 	// Change content when navigation is clicked
@@ -41,6 +39,8 @@ $(document).ready(function() {
 		$('.content.visible').fadeOut(function() {
 			$(this).removeClass('visible');
 			$('.content[rel=' + id + ']').fadeIn().addClass('visible');
+			$('.selected').removeClass('selected');
+			$('.button[rel=' + id + ']').addClass('selected');
 			_gaq.push(['_trackPageview', id]); // track analytics async call
 		});
 	}
