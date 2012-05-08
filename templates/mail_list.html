@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Købstaden | Admin</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
+  <link rel="stylesheet" href="/static/stylesheet/compiled/main.css">
+  <script src="/static/javascript/libs/modernizr-2.0.6.min.js"></script>
+
+</head>
+<body>
+<ul>
+{% for mail in emails %}
+  <li>{{ mail.email }}</li>
+{%endfor%}
+</ul>
+</body>
+</html>
