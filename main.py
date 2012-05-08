@@ -90,6 +90,15 @@ class RemoveEmail(webapp2.RequestHandler):
         self.redirect('/removed/')
 
 
+class GetMailList(BaseHandler):
+    def get(self):
+        mails = EmailSignup.query()
+        context = {
+            "emails": mails
+        }
+        self.render_response("mail_list.html", **context)
+
+
 config = {}
 config['webapp2_extras.jinja2'] = {
     'environment_args': {'autoescape': True, 'extensions': ['jinja2.ext.autoescape', 'jinja2.ext.with_', 'jinja2.ext.i18n']}
@@ -102,4 +111,8 @@ app = webapp2.WSGIApplication([
     webapp2.Route(r'/removed/', handler="main.IndexHandler", name='signup'),
     webapp2.Route(r'/confirm/<key>/', handler="main.ConfirmEmail", name='signup'),
     webapp2.Route(r'/delete/<email>/', handler="main.RemoveEmail", name='signup'),
+    ], debug=False, config=config)
+
+app_admin = webapp2.WSGIApplication([
+    webapp2.Route(r'/admin/get_mails/', handler="main.GetMailList", name='home')
     ], debug=False, config=config)
