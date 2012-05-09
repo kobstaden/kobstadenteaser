@@ -169,9 +169,46 @@ body {
 			.section-center {
 				@include column(21, true);
 				padding: 0 0 15px 0;
+				position: relative;
+
+				.video{
+					position: relative;
+					height: 315px + 40px;
+					width: 560px + 40px;
+					margin: 0 auto;
+
+					#front-videoplay {
+						position: absolute;
+						top: 122px; // ((315+40)/2)-(111/2)
+						left: 244px; // ((560+40)/2)-(111/2)
+						z-index: 2;
+						cursor: pointer;
+						@include single-transition(all, 0.5s, false, false);
+						@include scale(0.9, 0.9);
+
+						&:hover {
+							@include single-transition(all, 0.5s, false, false);
+							@include scale(1.1, 1.1);
+						}
+					}
+
+					#front-videoplaceholder {
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 1;
+					}
+					#front-videoembed {
+						position: absolute;
+						top: 20px;
+						left: 20px;
+						//@include opacity(0);
+						z-index: 3;
+					}
+				}
 
 				h2 {
-					font-size: 2.7em;
+					font-size: 2.15em;
 					margin: 0.5em 0;
 				}
 
@@ -181,7 +218,7 @@ body {
 				}
 
 				h3 {
-					font-size: 1.5em;
+					font-size: 1.4em;
 					color: darken($color_tertiary, 15%);
 					//font-style: italic;
 					margin: 1em 0 0.5em 0;
@@ -196,7 +233,9 @@ body {
 			.section-bottom {
 				@include column(21, true);
 				border-top: 1px dotted $color_tertiary;
-				padding: 35px 0 0 0;
+				padding: 40px 0 40px 0;
+				margin-bottom: -40px;
+				background-color: #f2f6f9;
 
 				p {
 					display: inline-block;

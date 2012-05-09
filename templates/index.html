@@ -50,17 +50,23 @@
 				<div id="content-0" rel="forside" class="content visible">
 					<div class="section-wrapper section-center">
 						<section>
-							<h2>Danmarks første online shoppingcenter.</h2>
-							<iframe width="560" height="315" src="http://www.youtube.com/embed/1QhyhtAAskY?modestbranding=1&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>
+							<h2>Købstaden er Danmarks første online shoppingcenter.</h2>
 							<h3>Shop blandt hundredevis af spændende<br /> danske lokalbutikker, ét samlet sted.</h3>
+							<div class="video">
+								<img id="front-videoplay" src="/static/images/video-play.png" alt="Intro video til butikker" />
+								<img id="front-videoplaceholder" src="/static/images/video-placeholder.png" alt="Intro video til butikker" />
+								<div id="front-videoembed">
+									<div id="front-videoembed-replacer"></div>
+								</div>
+							</div>
+							<p>Har du en spændende butik? Se hvad du kan få ud af Købstaden i videoen eller <a rel="hoer-mere" class="button" href="#hoer-mere">Kontakt os.</a></p>
 						</section>
 					</div>
 					<div class="section-wrapper section-bottom">
 						<section>
 							<p>Få besked når vi går i luften sommeren 2012:</p>
-							<input type="text" name="email" class="input-email" placeholder="f.eks. john@doe.dk" /><input type="submit" value="tilmeld" class="input-submit" />
+							<input type="text" name="email" class="input-email" placeholder="f.eks. john@doe.dk" /><input type="submit" value="Tilmeld" class="input-submit" />
 							<span class="validation-error">E-mail er ikke gyldig, check din indtastning</span>
-							<p>Har du en butik og er interesseret i Købstaden, så vil vi meget gerne høre fra dig. <a rel="hoer-mere" class="button" href="#hoer-mere">Kontakt os.</a></p>
 						</section>
 					</div>									
 				</div>
@@ -369,28 +375,26 @@
 		
 		<div id="menu-wrapper">
 			<div id="menu">
-				<div class="introtext">Til butikker:</div>
-				<a id="button-1" rel="hvad" class="button" href="#hvad">
-					<span>Hvad?</span>
-					<!--<img src="/static/images/icon-balloondude.png" alt="Hvad er Købstaden?" />-->
-				</a>
-				<a id="button-2" rel="hvordan" class="button" href="#hvordan">
-					<span>Hvordan?</span>
-					<!--<img src="/static/images/icon-cogwheel.png" alt="Hvordan fungerer Købstaden?" />-->
+				<div class="introtext">For alle</div>
+				<a id="button-6" rel="forside" class="button" href="#forside">
+					<span>Købstaden</span>
 				</a>
 				<a id="button-4" rel="hvem" class="button" href="#hvem">
-					<span>Hvem?</span>
-					<!--<img src="/static/images/icon-flyingshop.png" alt="Hør mere om Købstaden?" />-->
+					<span>Teamet</span>
+				</a>
+				<div class="introtext">For butikker</div>
+				<a id="button-1" rel="hvad" class="button" href="#hvad">
+					<span>Konceptet</span>
+				</a>
+				<a id="button-2" rel="hvordan" class="button" href="#hvordan">
+					<span>Din butik</span>
 				</a>
 				<a id="button-5" rel="priser" class="button" href="#priser">
-					<span>Priser?</span>
-					<!--<img src="/static/images/icon-balloondude.png" alt="Hvad er Købstaden?" />-->
+					<span>Priser</span>
 				</a>
 				<a id="button-3" rel="hoer-mere" class="button" href="#hoer-mere">
-					<span>Hør mere</span>
-					<!--<img src="/static/images/icon-flyingshop.png" alt="Hør mere om Købstaden?" />-->
+					<span>Kontakt os</span>
 				</a>
-
 			</div>
 		</div>
 		<div class="fb-like" data-href="https://www.facebook.com/kobstaden" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
@@ -421,6 +425,11 @@
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
   </script>
+  	<!-- Google load and SWFOBJECT -->
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load("swfobject", "2.1");
+    </script>    
 
 	<!-- Add fancyBox -->
 	<link rel="stylesheet" href="/static/javascript/libs/fancybox/jquery.fancybox.css?v=2.0.5" type="text/css" media="screen" />

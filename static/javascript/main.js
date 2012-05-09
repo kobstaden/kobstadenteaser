@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 	// Initialize paths
 	var path = window.location.hash;
-	if (path) {
+	if (path && path != '#forside') {
 		path = path.slice(1);
 		changeContent(path);
 	}
@@ -59,6 +59,21 @@ $(document).ready(function() {
 			input.val(input.attr('placeholder'));
 		}
 	}).blur();
+
+	// Video embed on frontpage
+	$('#front-videoplay').click(function(e) {
+		//$('#front-videoplaceholder').fadeOut();
+		//$(this).fadeOut(function() {
+			//$('#front-videoembed').animate({'opacity':1});
+			// Lets Flash from another domain call JavaScript
+			var params = { allowScriptAccess: "always" };
+			// The element id of the Flash embed
+			var atts = { id: "ytPlayer" };
+			// All of the magic handled by SWFObject (http://code.google.com/p/swfobject/)
+			swfobject.embedSWF("http://www.youtube.com/v/1QhyhtAAskY?modestbranding=1&showinfo=0&theme=light&version=3&enablejsapi=1&playerapiid=player1&autoplay=1",
+				"front-videoembed-replacer", "560", "315", "9", null, null, params, atts);
+		//});
+	});
 
 	// Sign up form submit
 	$('#signup').submit(function() {
