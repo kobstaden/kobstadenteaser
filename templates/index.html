@@ -53,21 +53,24 @@
 							<h2>Købstaden er Danmarks første online shoppingcenter.</h2>
 							<h3>Shop blandt hundredevis af spændende<br /> danske lokalbutikker, ét samlet sted.</h3>
 							<div class="video">
-								<img id="front-videoplay" src="/static/images/video-play.png" alt="Intro video til butikker" />
+								<a href="http://www.youtube.com/watch?v=1QhyhtAAskY" id="front-videoplay"><img src="/static/images/video-play.png" alt="Intro video til butikker" /></a>
 								<img id="front-videoplaceholder" src="/static/images/video-placeholder.png" alt="Intro video til butikker" />
 								<div id="front-videoembed">
 									<div id="front-videoembed-replacer"></div>
 								</div>
 							</div>
-							<p>Har du en spændende butik? Se hvad du kan få ud af Købstaden i videoen eller <a rel="hoer-mere" class="button" href="#hoer-mere">Kontakt os.</a></p>
+							<p>Har du en spændende butik? Se hvad du kan få ud af Købstaden i videoen eller <a rel="hoer-mere" class="button" href="#hoer-mere">kontakt os.</a></p>
+							<a href="http://facebook.com/kobstaden" class="social" target="_blank"><img src="/static/images/social-facebook.png" alt="Købstaden på Facebook" /></a>
+							<a href="http://twitter.com/kobstaden" class="social" target="_blank"><img src="/static/images/social-twitter.png" alt="Købstaden på Twitter" /></a>
+							<a href="http://www.youtube.com/watch?v=1QhyhtAAskY" class="social" target="_blank"><img src="/static/images/social-youtube.png" alt="Købstaden på YouTube" /></a>							
 						</section>
 					</div>
 					<div class="section-wrapper section-bottom">
-						<section>
+						<form id="signup">
 							<p>Få besked når vi går i luften sommeren 2012:</p>
 							<input type="text" name="email" class="input-email" placeholder="f.eks. john@doe.dk" /><input type="submit" value="Tilmeld" class="input-submit" />
 							<span class="validation-error">E-mail er ikke gyldig, check din indtastning</span>
-						</section>
+						</form>
 					</div>									
 				</div>
 
@@ -268,26 +271,16 @@
 								<td><img src="/static/images/team-lasse.jpg"></td>
 								<td>
 									<h2>Lasse Boisen Andersen</h2>
-									<h3>Frontend-udvikler</h3>
+									<h3>Frontend-udvikler / Designer</h3>
 									<span class="mailme">la at kobstaden dot dk</span>
-									<p>Lasse er UI-udvikler og har til opgave, at gøre Købstaden lækker at bruge og se på. Han studerer til dagligt på IT Universitetet i København, er medstifter af iværksætterorganisationen ITU Innovators og har tidligere erfaring med udvikling af kundetilpassede webløsninger. Lasse <3 digitale medier og internettets muligheder - og så går han med sixpence og ryger pibe.</p>
+									<p>Lasse er UI-udvikler og har til opgave, at gøre Købstaden lækker at bruge og se på. Han har studeret på IT-Universitetet i København, er medstifter af iværksætterorganisationen ITU Innovators og har tidligere erfaring med udvikling af kundetilpassede webløsninger. Lasse <3 digitale medier og internettets muligheder - og så går han med sixpence og ryger e-pibe.</p>
 								</td>
-							</tr>
-							<tr>
-								<td><img src="/static/images/team-cameron.jpg"></td>
-								
-								<td>
-									<h2>Cameron Gallacher</h2>
-									<h3>Grafisk designer</h3>
-									<span class="mailme">cameron at camgallax dot com</span>
-									<p>Australske Cameron er ansvarlig for at udvikle Købstadens grafiske univers. Det er ham, der bringer liv til idéerne og får Købstaden til at se flot ud. Cameron er i gang med at lære dansk med lynets hast og han elsker Photoshop, rockmusik og kaffebønner.</p>
-								</td>
-							</tr>												
+							</tr>											
 							<tr>
 								<td><img src="/static/images/team-dan.jpg"></td>
 								<td>
 									<h2>Dan True</h2>
-									<h3>Backend udvikler</h3>
+									<h3>Backend-udvikler</h3>
 									<span class="mailme">dt at kobstaden dot dk</span>
 									<p>Dan er backend webudvikler og udvikler de tunge bagvedliggende funktioner, der gør Købstaden intelligent. Han har en bachelorgrad fra DTU som softwareingeniør og har erfaring med programmering af bl.a. kunstig intelligens og har desuden arbejdet med statistik hos CEM Institute. Vi andre må som ofte stå og se til i forundring når Dan skriver sine algoritmer op på tavlen..</p>
 								</td>
@@ -301,6 +294,15 @@
 									<p>Søren roder med Købstadens bagvedliggende kode og er passioneret omkring udvikling af nye features til Købstaden. Han studerer til dagligt på IT Universitetet og har tidligere erfaring som webudviklingskonsulent. I weekender renoverer Søren sin nyindkøbte lejlighed for fulde drøn.</p>
 								</td>
 							</tr>
+							<tr>
+								<td><img src="/static/images/team-vanja.jpg"></td>
+								<td>
+									<h2>Vanja Cosic</h2>
+									<h3>Frontend-udvikler</h3>
+									<span class="mailme">vanjacosic at gmail dot com</span>
+									<p>Vanja er frontend-udvikler med stor erfaring indenfor webdesign, blandt andet fra webbureauet Supertusch. Sammen med Lasse, sørger de for at Købstadens ydre altid er præsentabelt og velfungerende. Som en del af ITU Innovators bestyrelse har han altid fingeren på pulsen indenfor IT-iværksætteri. Vanja er nærmest manisk omkring design helt ned til sidste pixel og han snakker lige så hurtigt som han programmerer.</p>
+								</td>
+							</tr>							
 							<tr>
 								<td><img src="/static/images/team-senior.jpg"></td>
 								<td>
@@ -403,7 +405,9 @@
 	</div> <!--! end of #container -->	
 	<div id="footer-wrapper">
 		<footer>
-			<div id="footer-inner">Copyright © 2012 Købstaden ApS &nbsp; | &nbsp; Dampfærgevej 2a &nbsp; | &nbsp; 2100 København Ø &nbsp; | &nbsp; +45 71 99 07 20 &nbsp; | &nbsp; info@købstaden.dk | &nbsp; CVR: 34228043</div>
+			<div id="footer-inner">
+				Copyright © 2012 Købstaden ApS &nbsp; | &nbsp; Dampfærgevej 2a &nbsp; | &nbsp; 2100 København Ø &nbsp; | &nbsp; +45 71 99 07 20 &nbsp; | &nbsp; info@købstaden.dk | &nbsp; CVR: 34228043
+			</div>
 			<div id="hidden">
 				<img src="/static/images/icon-checkmark.gif" alt="OK" />
 				<img src="/static/images/icon-exclamation.gif" alt="Advarsel" />

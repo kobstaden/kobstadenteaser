@@ -100,6 +100,7 @@ body {
 			
 			span {
 				display: block;
+				@include opacity(0.99);
 			}
 			&:hover {
 				//@include single-box-shadow(rgba(0,0,0,0.1), 2px, 2px, 5px, 0, inset);
@@ -177,18 +178,18 @@ body {
 					width: 560px + 40px;
 					margin: 0 auto;
 
-					#front-videoplay {
+					#front-videoplay img {
 						position: absolute;
 						top: 122px; // ((315+40)/2)-(111/2)
 						left: 244px; // ((560+40)/2)-(111/2)
 						z-index: 2;
 						cursor: pointer;
 						@include single-transition(all, 0.5s, false, false);
-						@include scale(0.9, 0.9);
+						@include scale3d(0.9, 0.9);
 
 						&:hover {
 							@include single-transition(all, 0.5s, false, false);
-							@include scale(1.1, 1.1);
+							@include scale3d(1.1, 1.1);
 						}
 					}
 
@@ -224,10 +225,11 @@ body {
 					margin: 1em 0 0.5em 0;
 				}	
 
-				.fb-like {
-					margin-top: 20px;
-					z-index: 1000;
+				.social img {
+					width: 40px;
+					height: 40px;
 				}
+
 			}
 
 			.section-bottom {
@@ -241,10 +243,6 @@ body {
 					display: inline-block;
 				}
 
-				form {
-					margin-bottom: 20px;
-				}			
-				
 				input {
 					@include border-radius(3px);
 					background-color: $color_primary;
