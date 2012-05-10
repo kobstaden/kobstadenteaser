@@ -28,8 +28,7 @@ $(document).ready(function() {
 		path = path.slice(1);
 		changeContent(path);
 	} else if (!path) {
-		console.log("front");
-		window.location.hash("forside");
+		window.location.hash = "forside";
 	}
 
 	// Navigation
