@@ -391,7 +391,20 @@ body {
 					float:right;
 					font-size: 0.8em;
 				}
-			}			
+			}	
+
+			.demands {
+				position: relative;
+
+				h2 {
+					text-align: center;
+				}
+				.demand-box {
+					position: relative;
+					width: 75%;
+					margin: 0 auto;
+				}
+			}		
 		}
 		
 		// Kontakt page
