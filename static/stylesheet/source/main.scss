@@ -315,6 +315,10 @@ body {
 			.table {
 				margin-bottom: 20px;
 				
+				.headline {
+					text-align: center;
+				}
+
 				.image {
 					//height: 120px;
 					width: 50px;					
@@ -401,8 +405,21 @@ body {
 				}
 				.demand-box {
 					position: relative;
-					width: 75%;
 					margin: 0 auto;
+					@include clearfix();
+					overflow: visible;
+					margin-bottom: 40px;
+					
+					h3 {
+						padding-left: 110px;
+					}
+					.demand-image {
+						float:left;
+						width: 80px;
+						margin-right: 30px;
+						@include opacity(0.2);
+						margin-bottom: 50px;
+					}
 				}
 			}		
 		}
