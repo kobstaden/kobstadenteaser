@@ -24,17 +24,22 @@ $(document).ready(function() {
 
 	// Initialize paths
 	var path = window.location.hash;
-	if (path && path != '#forside') {
-		path = path.slice(1);
-		changeContent(path);
-	} else if (!path) {
+	if (path && path !== '#forside') {
+		changeContent(path.slice(1));
+	} else {
 		window.location.hash = "forside";
 	}
 
+	// Listens for has changes to change page
+	$(window).hashchange( function(){
+		changeContent(location.hash.substring(1));
+	})
+
+
 	// Navigation
-	$('.button').click(function() {
-		changeContent($(this).attr('rel'));
-	});
+	// $('.button').click(function() {
+	// 	changeContent($(this).attr('rel'));
+	// });
 
 	// Change content when navigation is clicked
 	function changeContent(id) {
@@ -45,6 +50,11 @@ $(document).ready(function() {
 			$('.button[rel=' + id + ']').addClass('selected');
 			_gaq.push(['_trackPageview', id]); // track analytics async call
 		});
+		if (id == 'forside') {
+			$('.coming-soon-badge').fadeIn();
+		} else {
+			$('.coming-soon-badge').fadeOut();
+		}
 	}
 
 	// Prepare sign up inputs

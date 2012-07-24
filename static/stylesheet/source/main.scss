@@ -145,6 +145,15 @@ body {
 	overflow-y: none;
 	overflow-x: none;
 	margin-bottom: 80px;
+	position: relative;
+
+	.coming-soon-badge {
+		position: absolute;
+		top: -11px;
+		right: -23px;
+		z-index: 1000;
+		display: none;
+	}
 	
 	#main {
 		@include clearfix;
@@ -209,7 +218,7 @@ body {
 				}
 
 				h2 {
-					font-size: 2.15em;
+					font-size: 2em;
 					margin: 0.5em 0;
 				}
 
@@ -441,6 +450,9 @@ body {
 				background-color: $color_secondary;
 				padding: 20px;
 			}
+			table tr td {
+				padding: 5px;
+			}
 		}
 		
 		// Hvem? page
@@ -495,6 +507,9 @@ body {
 
 			img {
 				float: right;
+			}
+			ul {
+				margin-left: 15px;
 			}
 		}
 	}
